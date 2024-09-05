@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources - DisasterWatch</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0f4f8;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #0077b6; /* DisasterWatch theme blue */
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .resources-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .resource {
+      padding: 20px;
+      background-color: #e3f2fd;
+      border-left: 5px solid #0077b6;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+    .resource:hover {
+      background-color: #cce5ff;
+      border-color: #0056b3;
+    }
+    .resource h2 {
+      margin-top: 0;
+      color: #0077b6;
+    }
+    .resource a {
+      color: #0077b6;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .resource a:hover {
+      text-decoration: underline;
+    }
+    @media screen and (min-width: 768px) {
+      .resources-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .resource {
+        flex: 1;
+        max-width: calc(50% - 20px);
+      }
+    }
+    @media screen and (min-width: 992px) {
+      .resource {
+        max-width: calc(33.33% - 20px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Resources</h1>
+    <div class="resources-list">
+      <div class="resource">
+        <h2>Safety Guidelines</h2>
+        <p>Find essential safety guidelines to prepare and protect yourself during emergencies.</p>
+        <a href="https://www.fema.gov/emergency-managers/preparedness" target="_blank">FEMA Emergency Preparedness</a>
+        <br>
+        <a href="https://www.redcross.org/get-help/how-to-prepare-for-emergencies.html" target="_blank">Red Cross Preparedness</a>
+      </div>
+      <div class="resource">
+        <h2>Government Websites</h2>
+        <p>Access official government resources and information for disaster management and response.</p>
+        <a href="https://www.ready.gov" target="_blank">Ready.gov</a>
+        <br>
+        <a href="https://www.cdc.gov/disasters/index.html" target="_blank">CDC Disaster Information</a>
+      </div>
+      <div class="resource">
+        <h2>Emergency Contact Information</h2>
+        <p>Quick access to emergency contact numbers and local services.</p>
+        <a href="tel:911">Emergency Services: 911</a>
+        <br>
+        <a href="tel:555-555-5555">Local Emergency Contact: 555-555-5555</a>
+        <br>
+        <a href="mailto:support@disasterwatch.com">Email Support: support@disasterwatch.com</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

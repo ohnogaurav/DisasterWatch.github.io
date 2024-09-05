@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* Section Styling */
+  section {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    background-color: #1b263b; /* Deep navy background for disaster theme */
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .column {
+    width: 100%;
+    padding: 0 1em 1em 1em;
+    text-align: center;
+  }
+  
+  /* Card Styling */
+  .card {
+    width: 100%;
+    height: 100%;
+    padding: 2em 1.5em;
+    background: linear-gradient(#ffffff 50%, #0077b6 50%);
+    background-size: 100% 200%;
+    background-position: 0 2.5%;
+    border-radius: 5px;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #003566; /* Dark blue for heading */
+    margin: 1em 0;
+  }
+  
+  p {
+    color: #adb5bd; /* Light gray text for body */
+    font-size: 15px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+  }
+  
+  /* Hover Effect */
+  .card:hover {
+    background-position: 0 100%;
+  }
+  
+  .card:hover h3 {
+    color: #ffffff; /* Text turns white on hover */
+  }
+  
+  .card:hover p {
+    color: #d3d3d3; /* Light gray for better contrast on hover */
+  }
+  
+  /* Glow Animation */
+  .glow {
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  /* Glow Keyframes */
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #0077b6, 0 0 30px #0096c7, 0 0 40px #0096c7, 0 0 50px #00b4d8, 0 0 60px #00b4d8, 0 0 70px #90e0ef;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #00b4d8, 0 0 40px #00b4d8, 0 0 50px #90e0ef, 0 0 60px #90e0ef, 0 0 70px #caf0f8;
+    }
+  }
+  
+  /* Media Queries */
+  @media screen and (min-width: 768px) {
+    section {
+      padding: 0 2em;
+    }
+    .column {
+      flex: 0 50%;
+      max-width: 50%;
+    }
+  }
+  
+  @media screen and (min-width: 992px) {
+    section {
+      padding: 1em 3em;
+    }
+    .column {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+    }
+  }
+  
+  /* Custom Icon Wrappers (Optional if using icons) */
+  .icon-wrapper {
+    background-color: #00b4d8; /* Blue accent for icons */
+    position: relative;
+    margin: auto;
+    font-size: 30px;
+    height: 2.5em;
+    width: 2.5em;
+    color: #ffffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transition: 0.5s;
+  }
+  
+  .card:hover .icon-wrapper {
+    background-color: #ffffff;
+    color: #00b4d8; /* Invert colors on hover */
+  }
+  
